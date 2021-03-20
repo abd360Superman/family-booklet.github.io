@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Family Booklet</title>
+    </head>
+    <body>
+        <centre>
+            <img src = "clipart-family.png" id = "family_pic" height = 350 width = 250>
+            <p id = "english">My Family</p>
+            <p id = "spanish">Mi Familia</p>
+            <button id="next" onclick = "nextSlide()">Next</button>
+        </centre>
+        <script>
+            var i = 1;
+            var pic = ["clipart-family.png", "father.png", "mother.png", "brother.png", "me.png"];
+            var engText = ["My Family", "My Father", "My Mother", "My Brother", "Me"];
+            var spanText = ["Mi Familia", "Mi Padre", "Mi Madre", "Mi Hermano", "Yo"];
+            function nextSlide() {
+                if(i > pic.length) {
+                    i = 0;
+                }
+                document.getElementById("family_pic").img.src = pic[i];
+                document.getElementById("english").innerHTML = engText[i];
+                document.getElementById("spanish").innerHTML = spanText[i];
+                i++
+            }
+        </script>
+    </body>
+</html>
